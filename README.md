@@ -17,53 +17,51 @@ cosillas aprendidas en el strimin joya
 ### tsconfig.json (configurar)
   - tsconfig.json son opciones a nivel de instalaciones que realizamos en nuestro proyecto: (compilerOptions es interesante)
     ```
-{
-  "files": [],
-  "references": [
-    { "path": "./tsconfig.app.json" },
-    { "path": "./tsconfig.node.json" }
-  ],
-  "compilerOptions": {
-    "paths": {
-      "@/*": [
-        "./src/*"
-      ]
-    }
-  }, 
-}
-
+      {
+        "files": [],
+        "references": [
+          { "path": "./tsconfig.app.json" },
+          { "path": "./tsconfig.node.json" }
+        ],
+        "compilerOptions": {
+          "paths": {
+            "@/*": [
+              "./src/*"
+            ]
+          }
+        }, 
+      }
     ```
   - tsconfig.app.json son opciones a nivel de proyecto, como por ejemplo que al importar usemos @ en vez del path entero:
   ```
-{
-  "compilerOptions": {
-    "target": "ES2020",
-    "useDefineForClassFields": true,
-    "lib": ["ES2020", "DOM", "DOM.Iterable"],
-    "module": "ESNext",
-    "skipLibCheck": true,
-
-    /* Bundler mode */
-    "moduleResolution": "bundler",
-    "allowImportingTsExtensions": true,
-    "isolatedModules": true,
-    "moduleDetection": "force",
-    "noEmit": true,
-    "jsx": "react-jsx",
-
-    /* Linting */
-    "strict": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "noFallthroughCasesInSwitch": true,
-    "baseUrl": ".",
-    "paths": {
-      "@/*": [
-        "./src/*"
-      ]
+    {
+      "compilerOptions": {
+        "target": "ES2020",
+        "useDefineForClassFields": true,
+        "lib": ["ES2020", "DOM", "DOM.Iterable"],
+        "module": "ESNext",
+        "skipLibCheck": true,
+    
+        /* Bundler mode */
+        "moduleResolution": "bundler",
+        "allowImportingTsExtensions": true,
+        "isolatedModules": true,
+        "moduleDetection": "force",
+        "noEmit": true,
+        "jsx": "react-jsx",
+    
+        /* Linting */
+        "strict": true,
+        "noUnusedLocals": true,
+        "noUnusedParameters": true,
+        "noFallthroughCasesInSwitch": true,
+        "baseUrl": ".",
+        "paths": {
+          "@/*": [
+            "./src/*"
+          ]
+        }
+    },
+      "include": ["src"]
     }
-},
-  "include": ["src"]
-}
-
   ```
