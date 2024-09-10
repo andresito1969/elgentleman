@@ -88,3 +88,13 @@ Obviamente un bundler hace más cosas que las mencionadas antes, también
   - Patrón presentacional: Lógica asociada a una única funcionalidad
 
 
+# REACT
+Tenemos 2 triggers:
+  - Inicial: monta la app
+  - Re-render: Algo ya montado que hace renderizar de nuevo (se triggerea por eventos, llamadas a api etc)
+
+#### Renderizados del DOM y DOM virtual
+React tiene un DOM y un DOM virtual, los compara y ve si hay cambios, de haber cambios ejecuta el render solo de lo que ha cambiado.
+  - Trigger => Acción que empieza el flujo para que el DOM virtual pueda o no detectar cambios
+  - Render => Function que ejecuta la función (para montar un componente o actualizarlo por ejemplo)
+  - Commit => Aplicar el cambio detectado en el DOM virtual al DOM real
