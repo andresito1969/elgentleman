@@ -65,3 +65,26 @@ cosillas aprendidas en el strimin joya
       "include": ["src"]
     }
   ```
+
+### De back a front
+
+#### Bundler v2
+Obviamente un bundler hace más cosas que las mencionadas antes, también 
+  - transpila código: Hace que el browser entienda nuestro código
+  - Bundling: Crea bundles
+  - LazyLoading: Carga solo lo necesario
+
+
+#### Backend:
+  - Archivos pueden ser largos y no pasa nada porque se compila y ya está
+
+
+#### Front:
+  - El tamaño y la cantidad de archivos importa para tener un bundle más o menos optimizado
+  - Los archivos deben tener solo lo que necesitan
+  - Cada componente debe encargarse de una única lógica
+  - 400/200 líneas por archivo es ideal
+  - Patrón container: Como se muestran las cosas en pantalla
+  - Patrón presentacional: Lógica asociada a una única funcionalidad
+
+
