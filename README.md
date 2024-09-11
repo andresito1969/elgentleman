@@ -91,10 +91,27 @@ Obviamente un bundler hace más cosas que las mencionadas antes, también
 # REACT
 Tenemos 2 triggers:
   - Inicial: monta la app
-  - Re-render: Algo ya montado que hace renderizar de nuevo (se triggerea por eventos, llamadas a api etc)
+  - Re-render: Algo ya montado que hace renderizar de nuevo (se triggerea por eventos (clicks), llamadas a api etc, cambios de estado de componente)
 
 #### Renderizados del DOM y DOM virtual
 React tiene un DOM y un DOM virtual, los compara y ve si hay cambios, de haber cambios ejecuta el render solo de lo que ha cambiado.
   - Trigger => Acción que empieza el flujo para que el DOM virtual pueda o no detectar cambios
   - Render => Function que ejecuta la función (para montar un componente o actualizarlo por ejemplo)
   - Commit => Aplicar el cambio detectado en el DOM virtual al DOM real
+
+#### Atomic design pattern (componente con mínima unidad posible)
+El componente inicial de react, es decir el App que contiene el count, hemos hecho que esté en modo atómico (modular), es decir hemos pasado 
+el botón a un <ins>**componente dummy**</ins> el cual no contenía ninguna lógica. Si un componente tiene estado o lógica se le llama <ins>**stateful component**</ins>
+
+Después el parent de ese componente fue el que empezó a tener lógica y esa lógica fue pasada al child.
+
+También se creó un anchor el cual también era un componente sin lógica, sus props heredaban de AnchorHtmlAttributes<HtmlAnchorElement> y, podíamos
+reutilizar ambos componentes, como children también, muy elegante todo.
+
+#### Anti patrones
+  - Tener por ejemplo <AppComponent triggerer={() => action()}>
+    Como vemos aquí le pasamos al componente una función que luego va a ejecutar otra función, esto es feo y puede añadir carga
+
+    Solución: (paso por referencia, no ejecutamos la función, pero si le pasamos la referencia 
+    <AppComponent triggerer={action}>
+  - 
