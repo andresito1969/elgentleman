@@ -114,4 +114,17 @@ reutilizar ambos componentes, como children también, muy elegante todo.
 
     Solución: (paso por referencia, no ejecutamos la función, pero si le pasamos la referencia 
     <AppComponent triggerer={action}>
-  - 
+
+#### Batching
+
+Básicamente cuando ejecutamos varios useState de la misma variable en una función, ejemplo
+
+```
+  const addCounter = () => {
+    setCount(count + 1)
+    setCount(count + 1)
+    setCount(count + 1)
+  } 
+```
+
+Esto ejecuta en batería y, como solo renderiza una vez, agrupa los setters de cambio de estado y las ejecuta en batería, en este caso pondría 0 en el mount (primer render), 1 en el segundo etc.
