@@ -40,3 +40,16 @@
     }
 
 ```
+
+
+## Lo usamos en un componente....
+
+import {useFetch} from 'customhooks'
+
+const url = "...."
+
+const App = () => {
+  const {data, error, loading} = useFetch(url)
+
+  ....
+}
