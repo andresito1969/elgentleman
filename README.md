@@ -129,6 +129,8 @@ Básicamente cuando ejecutamos varios useState de la misma variable en una funci
 
 Esto ejecuta en batería y, como solo renderiza una vez, agrupa los setters de cambio de estado y las ejecuta en batería, en este caso pondría 0 en el mount (primer render), 1 en el segundo etc.
 
+
+
 ### Use Effect 
 #### Cuándo usar?
   - Cuando nos tenemos que comunicar con una entidad externa (endpoint)
@@ -140,3 +142,46 @@ Esto ejecuta en batería y, como solo renderiza una vez, agrupa los setters de c
 #### Anti patrón
   - Meter funciones por ejemplo de fetch dentro del useEffect
   - Controlar entidades internas del componente 
+
+
+
+## Custom hooks + clean code (interfaces) (ESTA CLASE ES SUPER INTERESANTE) https://www.youtube.com/watch?v=JT2YQG3dLwg
+
+### Generic <T>
+  ```
+    interface Params<T> {
+      data: T | null;
+    }
+  ```
+
+Esto significa que si usamos un tipo params, le podemos pasar un generico para que resuelva todo lo que T tiene al tipo que hemos puesto:
+
+Params<User>
+
+Esto resuelve como:
+  ```
+    interface Params {
+      data: User | null;
+    }
+  ```
+
+Código super bonito y reutilizable
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
