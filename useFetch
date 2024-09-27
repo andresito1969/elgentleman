@@ -53,8 +53,16 @@ import {useFetch} from 'customhooks'
 
 const url = "...."
 
+interface Data {
+  name: string;
+  lastName: string;
+  age: number;
+}
+
 const App = () => {
-  const {data, error, loading} = useFetch(url)
+  const {data, error, loading} = useFetch<Data>(url)
+
+  // Ahora el data tiene type Data gracias al generic
 
   ....
 }
