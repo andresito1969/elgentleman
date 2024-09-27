@@ -128,3 +128,15 @@ Básicamente cuando ejecutamos varios useState de la misma variable en una funci
 ```
 
 Esto ejecuta en batería y, como solo renderiza una vez, agrupa los setters de cambio de estado y las ejecuta en batería, en este caso pondría 0 en el mount (primer render), 1 en el segundo etc.
+
+### Use Effect 
+#### Cuándo usar?
+  - Cuando nos tenemos que comunicar con una entidad externa (endpoint)
+  - Operacions asincronas (timeout, interval)
+  - Parámetros de entrada (props que vienen de un padre, ya que viene de afuera!)
+  - Context quizá, redux casi nunca
+  - 
+
+#### Anti patrón
+  - Meter funciones por ejemplo de fetch dentro del useEffect
+  - Controlar entidades internas del componente 
