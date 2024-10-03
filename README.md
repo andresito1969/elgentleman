@@ -170,6 +170,10 @@ Código super bonito y reutilizable
 
 ### Custom hook (useFetch)
 
+#### Cuándo usar?
+REGLA DE ORO (palabras textuales):
+"si es una lógica la cual depende de un estado y se repite en más de un lugar, un custom hook es la que va 😏"
+
 Entrar al link de abajo, es demasiado
 https://github.com/andresito1969/elgentleman/blob/main/useFetch
 
