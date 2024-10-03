@@ -24,6 +24,27 @@ Pseudocode:
   <Button>Botón ajeno al formulario, podría enviar toda la request de la página</Button>
 ```
 
+**Cleaner Pseudocode**
+
+  ```
+    const AppForm() {
+      return (<form>
+      <input ....>
+      <input ....>
+      <div ....>
+      {children}
+    }
+
+    const ParentPage {
+      return(
+        <AppForm>
+          <Button>Botón children del formulario, ya vienen los inputs hechos</Button>
+        </AppForm>
+      )
+    }
+    
+  ```
+
 #### Archivo de la página
   ```
   interface FormProps {
