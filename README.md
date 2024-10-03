@@ -179,9 +179,13 @@ https://github.com/andresito1969/elgentleman/blob/main/useFetch
 
 
 
+### Composition pattern
 
+#### Cuándo usar?
+Cuando querrámos compartir estados o funciones en el contexto de una página (no a nivel de app).
 
-
+Link de abajo mucha info adicional
+https://github.com/andresito1969/elgentleman/blob/main/compositionPattern.md
 
 
 
