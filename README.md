@@ -179,7 +179,7 @@ https://github.com/andresito1969/elgentleman/blob/main/useFetch
 
 
 
-### Composition pattern
+### Composition pattern https://www.youtube.com/watch?v=tCo_1GiwScg&t=5985s
 
 #### Cuándo usar?
 Cuando querrámos compartir estados o funciones en el contexto de una página (no a nivel de app).
